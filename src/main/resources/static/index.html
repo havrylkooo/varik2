@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Графічний редактор</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .figure-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fefefe;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #e6f2ff;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .start-button {
+            padding: 12px 30px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .start-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ласкаво просимо до Графічного Редактора</h1>
+    <p>Ознайомтесь з інструментами перед початком малювання</p>
+</header>
+
+<main>
+    <div class="figure-info">
+        <div class="card">
+            <h3>Коло</h3>
+            <p>Малює фігуру з рівномірним радіусом навколо центральної точки. Ідеально для створення кругів.</p>
+        </div>
+        <div class="card">
+            <h3>Квадрат</h3>
+            <p>Фігура з рівними сторонами та кутами. Підходить для побудови рівномірних форм.</p>
+        </div>
+        <div class="card">
+            <h3>Прямокутник</h3>
+            <p>Форма з чотирма кутами, у якій протилежні сторони рівні. Універсальний інструмент.</p>
+        </div>
+        <div class="card">
+            <h3>Пряма</h3>
+            <p>Малює лінію між двома точками. Використовується для контурів і з'єднань.</p>
+        </div>
+        <div class="card">
+            <h3>Олівець</h3>
+            <p>Вільне малювання по полотну. Слідує за рухами миші в реальному часі.</p>
+        </div>
+        <div class="card">
+            <h3>Стирачка</h3>
+            <p>Видаляє частини малюнку, імітуючи біле перо. Корисна для корекцій.</p>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="editor.html">
+            <button class="start-button">Перейти до редактора</button>
+        </a>
+    </div>
+</main>
+
+<footer>
+    © 2025 Ваш графічний редактор. Усі права захищено.
+</footer>
+
+</body>
+</html>

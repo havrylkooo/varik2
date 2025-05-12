@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Графічний редактор</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        #toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            align-items: center;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        input[type="color"], input[type="range"] {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #canvas {
+            display: block;
+            border-top: 2px solid #ccc;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #95a5a6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #7f8c8d;
+            transform: scale(1.05);
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <button class="back-button" onclick="window.location.href='index.html'">← Повернутись на головну</button>
+    <div id="toolbar">
+        <button data-tool="circle">Коло</button>
+        <button data-tool="square">Квадрат</button>
+        <button data-tool="rectangle">Прямокутник</button>
+        <button data-tool="line">Пряма</button>
+        <button data-tool="pencil">Олівець</button>
+        <button data-tool="eraser">Стирачка</button>
+        <label style="margin-left: 10px;">Колір:
+            <input type="color" id="colorPicker" />
+        </label>
+        <label style="margin-left: 10px;">Розмір:
+            <input type="range" id="sizePicker" min="1" max="50" value="1" />
+        </label>
+    </div>
+</div>
+
+<canvas id="canvas" width="1200" height="800"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
